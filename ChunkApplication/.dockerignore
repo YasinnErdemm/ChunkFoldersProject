@@ -1,0 +1,14 @@
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+logs/
+chunks/
+.git/
+.gitignore
+README.md
+docker-compose.yml
+Dockerfile
+.dockerignore
