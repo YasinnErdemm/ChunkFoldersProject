@@ -1,8 +1,4 @@
 namespace ChunkApplication.Messages.Responses;
-
-/// <summary>
-/// Response message for individual file information
-/// </summary>
 public class FileListMessage
 {
     public string FileId { get; set; } = string.Empty;

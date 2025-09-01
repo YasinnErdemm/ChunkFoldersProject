@@ -1,161 +1,204 @@
-# Chunk Application - Distributed File Processing System
+# ChunkApplication - Distributed File Chunking System
 
-Bu proje, dosyaları chunk'lara bölen ve RabbitMQ kullanarak distributed processing yapan bir sistemdir.
+## 📋 Proje Açıklaması
 
-## Mimari
+Bu proje, büyük dosyaların otomatik olarak küçük parçalara (chunk) ayrılması, bu parçaların farklı depolama sağlayıcılarına dağıtılması ve gerektiğinde birleştirilerek dosya bütünlüğünün korunmasının sağlandığı bir altyapıyı .NET Console Application olarak tasarlayıp geliştirmektedir.
 
-Proje iki ana bileşenden oluşur:
+## 🎯 Temel Özellikler
 
-1. **ChunkService** (`ChunkApplication/`) - RabbitMQ consumer, dosya chunk işlemlerini yapar
-2. **ChunkClient** (`ChunkClient/`) - Kullanıcı arayüzü, RabbitMQ publisher, menü ve dosya yönetimi
+- **Dinamik Chunk'lama:** Dosya boyutuna göre otomatik optimal chunk boyutu hesaplama
+- **Çoklu Dosya Desteği:** Tek mesajda virgülle ayrılmış dosya yolları ile toplu işlem
+- **Distributed Storage:** Chunk'ları rastgele FileSystem ve Database provider'lara dağıtma
+- **Checksum Doğrulaması:** SHA256 ile dosya ve chunk bütünlüğü kontrolü
+- **Asenkron İşlem:** RabbitMQ ile message-based processing
+- **Metadata Yönetimi:** Entity Framework Core ile SQL Server veritabanı
+- **File Reconstruction:** Chunk'lardan dosya birleştirme ve output klasörüne kaydetme
 
-## Özellikler
+## 🏗️ Mimari Yapı
 
-- Dosya chunk'lama ve birleştirme
-- RabbitMQ ile distributed processing
-- SQL Server veritabanı desteği
-- Docker containerization
-- Logging ve monitoring
+### **Design Patterns:**
+- **Repository Pattern:** Veri erişim katmanı
+- **Strategy Pattern:** Storage provider seçimi
+- **Factory Pattern:** Consumer oluşturma
+- **Observer Pattern:** RabbitMQ message handling
 
-## Kurulum
+### **SOLID Prensipleri:**
+- **Single Responsibility:** Her sınıf tek sorumluluk
+- **Open/Closed:** Interface'ler ile genişletilebilir
+- **Liskov Substitution:** Storage provider'lar değiştirilebilir
+- **Interface Segregation:** Küçük, odaklanmış interface'ler
+- **Dependency Inversion:** DI container kullanımı
 
-### Gereksinimler
+## 🚀 Kurulum ve Çalıştırma
 
+### **Gereksinimler:**
 - .NET 8.0 SDK
-- Docker ve Docker Compose
+- Docker & Docker Compose
 - SQL Server (Docker ile otomatik kurulum)
 
-### Docker ile Çalıştırma
-
-1. Projeyi klonlayın:
+### **1. Projeyi Klonlayın:**
 ```bash
 git clone <repository-url>
 cd ChunkApplication
 ```
 
-2. Docker Compose ile servisleri başlatın:
+### **2. Docker Servislerini Başlatın:**
 ```bash
 docker-compose up -d
 ```
 
-Bu komut şu servisleri başlatacak:
-- RabbitMQ (port 15672 - Web UI)
-- SQL Server (port 1433)
-- ChunkService (consumer)
-- ChunkClient (publisher)
-
-3. RabbitMQ Web UI'ya erişin:
-   - URL: http://localhost:15672
-   - Kullanıcı: admin
-   - Şifre: admin123
-
-### Manuel Çalıştırma
-
-1. ChunkService'i çalıştırın:
+### **3. Uygulamayı Çalıştırın:**
 ```bash
+# Application Console (Consumer)
 cd ChunkApplication
+dotnet run --project ChunkApplication.Console
+
+# Client (yeni terminal)
+cd ChunkClient  
 dotnet run
 ```
 
-2. Yeni bir terminal açın ve ChunkClient'i çalıştırın:
-```bash
-cd ChunkClient
-dotnet run
+## 📱 Kullanım
+
+### **Client Menüsü:**
+1. **Send chunk file request** - Dosya chunk'lama (tekli/çoklu)
+2. **Send reconstruct file request** - Dosya birleştirme
+3. **Send list files request** - Dosya listesi
+4. **Send get file info request** - Dosya detayları
+5. **Send delete file request** - Dosya silme
+6. **Show cached file list** - Cache'lenmiş dosyalar
+7. **Exit** - Çıkış
+
+### **Çoklu Dosya Örneği:**
+```
+Enter the path(s) to the file(s) you want to chunk (separate multiple files with comma):
+C:\Users\MONSTER\Desktop\dosyalar\test1.txt,C:\Users\MONSTER\Desktop\dosyalar\test2.txt,C:\Users\MONSTER\Desktop\dosyalar\test3.txt
+
+→ Tek mesajda 3 dosya gönderilir
+→ Application virgülle ayırıp teker teker chunk'lar
+→ Her dosya ayrı FileId ile database'e kaydedilir
 ```
 
-## Kullanım
+## 🔧 Teknik Detaylar
 
-### ChunkClient Menüsü
+### **Chunk'lama Algoritması:**
+- **< 64 KB:** 2 chunk (dosya boyutu / 2)
+- **64 KB - 256 KB:** 128 KB chunk boyutu
+- **256 KB - 1 MB:** 256 KB chunk boyutu
+- **1 MB - 5 MB:** 1 MB chunk boyutu
+- **5 MB+:** 5 MB chunk boyutu
 
-ChunkClient çalıştığında şu menüyü göreceksiniz:
+### **Storage Provider'lar:**
+- **FileSystemStorageProvider:** `chunks/` klasörüne `.chunk` dosyaları
+- **DatabaseStorageProvider:** `chunk2/` klasörüne `.dbchunk` dosyaları
+- **Random Selection:** Her chunk rastgele provider'a atanır
 
-1. **Send chunk file request** - Dosya chunk'lama isteği gönder
-2. **Send reconstruct file request** - Dosya birleştirme isteği gönder
-3. **Send list files request** - Dosya listesi isteği gönder
-4. **Send get file info request** - Dosya bilgisi isteği gönder
-5. **Send delete file request** - Dosya silme isteği gönder
-6. **Exit** - Çıkış
+### **Veritabanı Şeması:**
+- **Files:** Dosya metadata'ları (Id, FileName, OriginalPath, FileSize, Checksum, etc.)
+- **Chunks:** Chunk bilgileri (Id, FileId, ChunkNumber, StorageProvider, StoragePath, etc.)
+- **Relations:** Files → Chunks (1:N) cascade delete
 
-### Örnek Kullanım
+## 📊 Performans Özellikleri
 
-1. **Dosya Chunk'lama:**
-   - Menüden "1" seçin
-   - Chunk'lanacak dosya yolunu girin
-   - İstek RabbitMQ'ya gönderilecek ve ChunkService tarafından işlenecek
+- **Concurrent Processing:** Scoped service lifetime ile thread-safe
+- **Memory Efficient:** Streaming ile büyük dosya desteği  
+- **File Sharing:** FileShare.Read ile paralel dosya erişimi
+- **Scalable:** RabbitMQ ile horizontal scaling
+- **Fault Tolerant:** Retry mechanism ve comprehensive error handling
+- **Consumer Optimization:** BasicQos ile controlled message processing
 
-2. **Dosya Birleştirme:**
-   - Menüden "2" seçin
-   - File ID'yi girin
-   - Çıktı dosya adını girin
-   - Dosya Desktop/ChunkApplication_Output klasörüne birleştirilecek
+## 🔒 Güvenlik
 
-## RabbitMQ Queue'ları
+- **Checksum Verification:** SHA256 ile dosya bütünlüğü
+- **Input Validation:** Dosya yolu ve boyut kontrolü
+- **Error Handling:** Comprehensive exception management
+- **Logging:** Tüm işlemler loglanıyor
 
-Sistem şu queue'ları kullanır:
+## 🧪 Test
 
-- `chunk-file-request` - Dosya chunk'lama istekleri
-- `reconstruct-file-request` - Dosya birleştirme istekleri
-- `list-files-request` - Dosya listesi istekleri
-- `get-file-info-request` - Dosya bilgisi istekleri
-- `delete-file-request` - Dosya silme istekleri
-
-## Loglar
-
-- ChunkService logları: `ChunkApplication/logs/`
-- ChunkClient logları: Console output
-- RabbitMQ logları: Docker container logs
-
-## Docker Komutları
-
+### **Build:**
 ```bash
-# Servisleri başlat
-docker-compose up -d
-
-# Logları görüntüle
-docker-compose logs -f
-
-# Belirli servisin loglarını görüntüle
-docker-compose logs -f chunk-service
-docker-compose logs -f chunk-client
-
-# Servisleri durdur
-docker-compose down
-
-# Servisleri yeniden başlat
-docker-compose restart
+dotnet build
 ```
 
-## Geliştirme
+### **Run:**
+```bash
+# Terminal 1: Application Console
+dotnet run --project ChunkApplication.Console
 
-### Yeni Consumer Ekleme
+# Terminal 2: Client
+dotnet run --project ChunkClient
+```
 
-1. `ChunkApplication/Consumers/` klasöründe yeni consumer sınıfı oluşturun
-2. `Program.cs`'de consumer'ı kaydedin
-3. Docker Compose'u yeniden başlatın
+### **Test Senaryosu:**
+1. **ChunkClient → 1. Send chunk file request**
+   ```
+   C:\Users\MONSTER\Desktop\dosyalar\test1.txt,C:\Users\MONSTER\Desktop\dosyalar\test2.txt
+   ```
+2. **ChunkClient → 3. Send list files request** (dosyaları listele)
+3. **ChunkClient → 6. Show cached file list** (cache'i gör)
+4. **ChunkClient → 2. Send reconstruct file request** 
+   - Dosya seç: `test1.txt`
+   - Output filename: `restored_test1.txt`
+   - Sonuç: `output/restored_test1.txt`
 
-### Yeni Message Type Ekleme
+## 📝 Loglar
 
-1. Message sınıfını oluşturun
-2. Consumer'ı oluşturun
-3. ChunkClient'te publisher metodunu ekleyin
+Loglar `logs/` klasöründe günlük olarak saklanır:
+- `chunk-application-YYYYMMDD.log`
+- Structured logging ile JSON format
 
-## Sorun Giderme
+## 📁 Klasör Yapısı
 
-### RabbitMQ Bağlantı Hatası
-- RabbitMQ container'ının çalıştığından emin olun
-- Port 5672'nin açık olduğunu kontrol edin
-- Kullanıcı adı/şifre bilgilerini kontrol edin
+```
+ChunkApplication/
+├── chunks/                 # FileSystemStorageProvider chunk'ları (.chunk)
+├── chunk2/                 # DatabaseStorageProvider chunk'ları (.dbchunk)  
+├── output/                 # Reconstruct edilen dosyalar
+├── logs/                   # Application logları
+└── ChunkApplication/       # Ana uygulama
+    ├── Application/        # Business logic
+    ├── Domain/            # Domain entities
+    ├── Infrastructure/    # Data access, messaging
+    └── Console/           # Console app
+```
 
-### Veritabanı Bağlantı Hatası
-- SQL Server container'ının çalıştığından emin olun
-- Port 1433'ün açık olduğunu kontrol edin
-- Connection string'i kontrol edin
+## ✅ Mevcut Özellikler
 
-### ChunkService Çalışmıyor
-- Logları kontrol edin: `docker-compose logs chunk-service`
-- Consumer'ların doğru kaydedildiğinden emin olun
-- RabbitMQ bağlantısını kontrol edin
+- [x] **FileSystemStorageProvider** - chunks/ klasörü
+- [x] **DatabaseStorageProvider** - chunk2/ klasörü  
+- [x] **Random Provider Selection** - Her chunk farklı provider'a
+- [x] **Multi-file Processing** - Tek mesajda çoklu dosya
+- [x] **File Reconstruction** - output/ klasörüne birleştirme
+- [x] **Checksum Verification** - SHA256 doğrulama
+- [x] **RabbitMQ Integration** - Async message processing
+- [x] **EF Core Integration** - SQL Server database
 
-## Lisans
+## 🔮 Gelecek Özellikler
+
+- [ ] **Cloud Storage** provider'ları (AWS S3, Azure Blob)
+- [ ] **Compression** desteği
+- [ ] **Encryption** desteği
+- [ ] **Web UI** dashboard
+- [ ] **REST API** endpoints
+- [ ] **Monitoring** ve metrics
+
+## 🤝 Katkıda Bulunma
+
+1. Fork yapın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit yapın (`git commit -m 'Add amazing feature'`)
+4. Push yapın (`git push origin feature/amazing-feature`)
+5. Pull Request açın
+
+## 📄 Lisans
 
 Bu proje MIT lisansı altında lisanslanmıştır.
+
+## 👨‍💻 Geliştirici
+
+- **Teknoloji:** .NET 8, C#, Entity Framework Core, RabbitMQ
+- **Mimari:** Clean Architecture, Repository Pattern, SOLID Principles
+- **Veritabanı:** SQL Server
+- **Message Broker:** RabbitMQ
+- **Logging:** Microsoft.Extensions.Logging

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ChunkApplication\\ChunkApplication.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ChunkClient\\ChunkClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MassTransit;
+using RabbitMQ.Client;
+using System.Text;
+using System.Text.Json;
 using ChunkClient.Messages.Requests;
 using ChunkClient.Messages.Responses;
 
@@ -15,10 +17,7 @@ class Program
 
     static async Task Main(string[] args)
     {
-        // Create host builder
         var host = CreateHostBuilder(args).Build();
-
-        // Run the application
         await RunApplicationAsync(host.Services);
     }
 
@@ -26,38 +25,35 @@ class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureServices((hostContext, services) =>
             {
-                // Add MassTransit for publishing messages
-                services.AddMassTransit(x =>
+                services.AddSingleton<IConnectionFactory>(provider =>
                 {
-                    // Add consumer for responses
-                    x.AddConsumer<FileProcessingResponseConsumer>();
-                    x.AddConsumer<FileListMessageConsumer>();
-
-                    // Configure RabbitMQ
-                    x.UsingRabbitMq((context, cfg) =>
+                    var host = hostContext.Configuration["RabbitMQ:Host"] ?? "localhost";
+                    var username = hostContext.Configuration["RabbitMQ:Username"] ?? "admin";
+                    var password = hostContext.Configuration["RabbitMQ:Password"] ?? "admin123";
+                    
+                    return new ConnectionFactory
                     {
-                        cfg.Host(hostContext.Configuration["RabbitMQ:Host"] ?? "rabbitmq", "/", h =>
-                        {
-                            h.Username(hostContext.Configuration["RabbitMQ:Username"] ?? "admin");
-                            h.Password(hostContext.Configuration["RabbitMQ:Password"] ?? "admin123");
-                        });
-
-                        // Configure endpoints
-                        cfg.ConfigureEndpoints(context);
-                    });
+                        HostName = host,
+                        UserName = username,
+                        Password = password
+                    };
                 });
-
-                // Add Logging
                 services.AddLogging();
             });
 
     static async Task RunApplicationAsync(IServiceProvider serviceProvider)
     {
-        var busControl = serviceProvider.GetRequiredService<IBusControl>();
+        var connectionFactory = serviceProvider.GetRequiredService<IConnectionFactory>();
         var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
 
-        // Start the bus
-        await busControl.StartAsync();
+        using var connection = connectionFactory.CreateConnection();
+        using var channel = connection.CreateModel();
+
+        var fileListConsumer = new FileListMessageConsumer(logger, channel);
+        var fileProcessingConsumer = new FileProcessingResponseConsumer(logger, channel);
+        
+        fileListConsumer.StartConsuming();
+        fileProcessingConsumer.StartConsuming();
 
         logger.LogInformation("Welcome to Chunk Client!");
         logger.LogInformation("This application sends chunking requests to the Chunk Service via RabbitMQ.");
@@ -85,28 +81,27 @@ class Program
                 }
 
                     switch (choice)
-                {
+                {   
                     case "1":
-                        await SendChunkFileRequestAsync(busControl, logger);
+                        await SendChunkFileRequestAsync(channel, logger);
                         break;
                     case "2":
-                        await SendReconstructFileRequestAsync(busControl, logger);
+                        await SendReconstructFileRequestAsync(channel, logger);
                         break;
                     case "3":
-                        await SendListFilesRequestAsync(busControl, logger);
+                        await SendListFilesRequestAsync(channel, logger);
                         break;
                     case "4":
-                        await SendGetFileInfoRequestAsync(busControl, logger);
+                        await SendGetFileInfoRequestAsync(channel, logger);
                         break;
                     case "5":
-                        await SendDeleteFileRequestAsync(busControl, logger);
+                        await SendDeleteFileRequestAsync(channel, logger);
                         break;
                     case "6":
                         ShowCachedFileList();
                         break;
                     case "7":
                         logger.LogInformation("Exiting application...");
-                        await busControl.StopAsync();
                         return;
                     default:
                         Console.WriteLine("Invalid option. Please try again.");
@@ -142,41 +137,104 @@ class Program
         }
     }
 
-    static async Task SendChunkFileRequestAsync(IBusControl busControl, ILogger logger)
+    static async Task SendChunkFileRequestAsync(IModel channel, ILogger logger)
     {
-        Console.Write("Enter the path to the file you want to chunk: ");
-        var filePath = Console.ReadLine()?.Trim('"');
+        Console.Write("Enter the path(s) to the file(s) you want to chunk (separate multiple files with comma): ");
+        var input = Console.ReadLine()?.Trim('"');
 
-        if (string.IsNullOrEmpty(filePath) || !File.Exists(filePath))
+        if (string.IsNullOrEmpty(input))
         {
-            Console.WriteLine("Invalid file path or file does not exist.");
+            Console.WriteLine("Invalid input.");
+            return;
+        }
+        var filePaths = input.Split(',')
+            .Select(p => p.Trim())
+            .Where(p => !string.IsNullOrEmpty(p))
+            .ToList();
+
+        if (filePaths.Count == 0)
+        {
+            Console.WriteLine("No valid file paths provided.");
+            return;
+        }
+        var validPaths = new List<string>();
+        var invalidPaths = new List<string>();
+
+        foreach (var path in filePaths)
+        {
+            if (File.Exists(path))
+            {
+                validPaths.Add(path);
+            }
+            else
+            {
+                invalidPaths.Add(path);
+            }
+        }
+
+        if (invalidPaths.Count > 0)
+        {
+            Console.WriteLine($"\n⚠️  Warning: {invalidPaths.Count} file(s) not found:");
+            foreach (var invalidPath in invalidPaths)
+            {
+                Console.WriteLine($"   ❌ {invalidPath}");
+            }
+        }
+
+        if (validPaths.Count == 0)
+        {
+            Console.WriteLine("No valid files to process.");
             return;
         }
 
+        Console.WriteLine($"\n📁 Processing {validPaths.Count} file(s)...");
+
+        var successCount = 0;
+        var failCount = 0;
+
         try
         {
+            // Declare queue once
+            channel.QueueDeclare("ChunkFileRequest", durable: true, exclusive: false, autoDelete: false);
+
+            var allFilePaths = string.Join(",", validPaths);
             var message = new ChunkFileMessage
             {
-                FilePath = filePath,
+                FilePath = allFilePaths, 
                 RequestId = Guid.NewGuid().ToString(),
                 Timestamp = DateTime.UtcNow
             };
 
-            await busControl.Publish(message);
+            var messageJson = JsonSerializer.Serialize(message);
+            var body = Encoding.UTF8.GetBytes(messageJson);
 
-            Console.WriteLine($"\nChunk file request sent successfully!");
-            Console.WriteLine($"Request ID: {message.RequestId}");
-            Console.WriteLine($"File Path: {message.FilePath}");
-            Console.WriteLine($"Timestamp: {message.Timestamp:yyyy-MM-dd HH:mm:ss}");
+            Console.WriteLine($"🔄 Sending SINGLE message with {validPaths.Count} files:");
+            Console.WriteLine($"   📁 Files: {allFilePaths}");
+            Console.WriteLine($"   🆔 RequestId: {message.RequestId}");
+            Console.WriteLine($"   📦 Message size: {body.Length} bytes");
+
+            channel.BasicPublish("", "ChunkFileRequest", null, body);
+
+            Console.WriteLine($"✅ Single message sent successfully with {validPaths.Count} files!");
+            successCount = 1;
+
+            Console.WriteLine($"\n📊 Batch Summary:");
+            Console.WriteLine($"   ✅ Successfully sent: {successCount} request(s)");
+            if (failCount > 0)
+            {
+                Console.WriteLine($"   ❌ Failed to send: {failCount} request(s)");
+            }
+            Console.WriteLine($"   📁 Total files: {validPaths.Count}");
+            Console.WriteLine($"   ⏳ Processing started... (check responses asynchronously)");
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Failed to send chunk file request");
-            Console.WriteLine($"Failed to send request: {ex.Message}");
+            logger.LogError(ex, "Failed to send chunk file requests");
+            Console.WriteLine($"Failed to send requests: {ex.Message}");
         }
     }
 
-    static async Task SendReconstructFileRequestAsync(IBusControl busControl, ILogger logger)
+    static async Task SendReconstructFileRequestAsync(IModel channel, ILogger logger)
     {
         if (_fileList.Count == 0)
         {
@@ -218,7 +276,10 @@ class Program
                 Timestamp = DateTime.UtcNow
             };
 
-            await busControl.Publish(message);
+            channel.QueueDeclare("ReconstructFileRequest", durable: true, exclusive: false, autoDelete: false);
+            var messageJson = JsonSerializer.Serialize(message);
+            var body = Encoding.UTF8.GetBytes(messageJson);
+            channel.BasicPublish("", "ReconstructFileRequest", null, body);
 
             Console.WriteLine($"\nReconstruct file request sent successfully!");
             Console.WriteLine($"Request ID: {message.RequestId}");
@@ -233,11 +294,10 @@ class Program
         }
     }
 
-    static async Task SendListFilesRequestAsync(IBusControl busControl, ILogger logger)
+    static async Task SendListFilesRequestAsync(IModel channel, ILogger logger)
     {
         try
         {
-            // Clear previous file list before requesting new one
             _fileList.Clear();
             
             var message = new ListFilesMessage
@@ -245,9 +305,10 @@ class Program
                 RequestId = Guid.NewGuid().ToString(),
                 Timestamp = DateTime.UtcNow
             };
-
-            var endpoint = await busControl.GetSendEndpoint(new Uri("queue:ListFilesRequest"));
-            await endpoint.Send(message);
+            channel.QueueDeclare("ListFilesRequest", durable: true, exclusive: false, autoDelete: false);
+            var messageJson = JsonSerializer.Serialize(message);
+            var body = Encoding.UTF8.GetBytes(messageJson);
+            channel.BasicPublish("", "ListFilesRequest", null, body);
 
             Console.WriteLine($"\nList files request sent successfully!");
             Console.WriteLine($"Request ID: {message.RequestId}");
@@ -262,7 +323,7 @@ class Program
         }
     }
 
-    static async Task SendGetFileInfoRequestAsync(IBusControl busControl, ILogger logger)
+    static async Task SendGetFileInfoRequestAsync(IModel channel, ILogger logger)
     {
         if (_fileList.Count == 0)
         {
@@ -293,8 +354,10 @@ class Program
                 RequestId = Guid.NewGuid().ToString(),
                 Timestamp = DateTime.UtcNow
             };
-
-            await busControl.Publish(message);
+            channel.QueueDeclare("GetFileInfoRequest", durable: true, exclusive: false, autoDelete: false);
+            var messageJson = JsonSerializer.Serialize(message);
+            var body = Encoding.UTF8.GetBytes(messageJson);
+            channel.BasicPublish("", "GetFileInfoRequest", null, body);
 
             Console.WriteLine($"\nGet file info request sent successfully!");
             Console.WriteLine($"Request ID: {message.RequestId}");
@@ -308,7 +371,7 @@ class Program
         }
     }
 
-    static async Task SendDeleteFileRequestAsync(IBusControl busControl, ILogger logger)
+    static async Task SendDeleteFileRequestAsync(IModel channel, ILogger logger)
     {
         if (_fileList.Count == 0)
         {
@@ -349,7 +412,10 @@ class Program
                 Timestamp = DateTime.UtcNow
             };
 
-            await busControl.Publish(message);
+            channel.QueueDeclare("DeleteFileRequest", durable: true, exclusive: false, autoDelete: false);
+            var messageJson = JsonSerializer.Serialize(message);
+            var body = Encoding.UTF8.GetBytes(messageJson);
+            channel.BasicPublish("", "DeleteFileRequest", null, body);
 
             Console.WriteLine($"\nDelete file request sent successfully!");
             Console.WriteLine($"Request ID: {message.RequestId}");
@@ -362,10 +428,6 @@ class Program
             Console.WriteLine($"Failed to send request: {ex.Message}");
         }
     }
-
-    /// <summary>
-    /// Dosya boyutunu uygun birimde formatlar (B, KB, MB, GB)
-    /// </summary>
     private static string FormatFileSize(long bytes)
     {
         string[] sizes = { "B", "KB", "MB", "GB", "TB" };
@@ -378,35 +440,29 @@ class Program
             len = len / 1024;
         }
         
-        if (order == 0) // Bytes
+        if (order == 0) 
         {
             return $"{len} {sizes[order]}";
         }
-        else if (order == 1) // KB
+        else if (order == 1) 
         {
             return $"{len:F1} {sizes[order]}";
         }
-        else // MB, GB, TB
+        else 
         {
             return $"{len:F2} {sizes[order]}";
         }
     }
-
-    // Method to update cached file list
     public static void UpdateFileList(List<FileInfo> files)
     {
         _fileList = files;
     }
-
-    // Method to get current cached file list
     public static List<FileInfo> GetCurrentFileList()
     {
         return _fileList;
     }
 }
 
-
-// File info class for caching
 public class FileInfo
 {
     public string Id { get; set; } = string.Empty;

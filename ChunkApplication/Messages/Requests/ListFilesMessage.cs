@@ -1,8 +1,5 @@
 namespace ChunkApplication.Messages.Requests;
 
-/// <summary>
-/// Request message for listing files
-/// </summary>
 public class ListFilesMessage
 {
     public string RequestId { get; set; } = string.Empty;

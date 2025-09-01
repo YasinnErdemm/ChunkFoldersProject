@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkApplication", "ChunkAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkClient", "ChunkClient\ChunkClient.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ChunkApplication", "ChunkApplication", "{78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkApplication.Domain", "ChunkApplication\ChunkApplication.Domain\ChunkApplication.Domain.csproj", "{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkApplication.Application", "ChunkApplication\ChunkApplication.Application\ChunkApplication.Application.csproj", "{44142349-3566-4CF1-9641-75BC93613D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkApplication.Infrastructure", "ChunkApplication\ChunkApplication.Infrastructure\ChunkApplication.Infrastructure.csproj", "{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkApplication.Console", "ChunkApplication\ChunkApplication.Console\ChunkApplication.Console.csproj", "{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +31,31 @@ Global
 		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44142349-3566-4CF1-9641-75BC93613D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44142349-3566-4CF1-9641-75BC93613D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44142349-3566-4CF1-9641-75BC93613D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44142349-3566-4CF1-9641-75BC93613D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9} = {78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}
+		{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0} = {78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}
+		{44142349-3566-4CF1-9641-75BC93613D32} = {78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}
+		{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2} = {78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}
+		{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70} = {78B7B10F-F5FA-4415-ADD0-EBB4EF92EBBC}
 	EndGlobalSection
 EndGlobal

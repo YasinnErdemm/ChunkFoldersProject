@@ -1,8 +1,5 @@
 namespace ChunkApplication.Messages.Responses;
 
-/// <summary>
-/// Response message for file processing status
-/// </summary>
 public class FileProcessingMessage
 {
     public string FileId { get; set; } = string.Empty;

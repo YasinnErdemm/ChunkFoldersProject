@@ -1,8 +1,5 @@
 namespace ChunkApplication.Messages.Requests;
 
-/// <summary>
-/// Request message for reconstructing a file
-/// </summary>
 public class ReconstructFileMessage
 {
     public string FileId { get; set; } = string.Empty;
