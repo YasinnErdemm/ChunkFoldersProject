@@ -35,6 +35,10 @@ public class ReconstructFileRequestConsumer : IDisposable
     {
         // Request queue
         _channel.QueueDeclare("ReconstructFileRequest", durable: true, exclusive: false, autoDelete: false);
+        
+        // Clear any old messages from the queue (optional - uncomment if needed)
+        // _channel.QueuePurge("ReconstructFileRequest");
+        // _logger.LogInformation("Purged old messages from ReconstructFileRequest queue");
 
         // Response queue
         _channel.QueueDeclare("reconstruct-file-response", durable: true, exclusive: false, autoDelete: false);
@@ -48,15 +52,62 @@ public class ReconstructFileRequestConsumer : IDisposable
                 var message = Encoding.UTF8.GetString(body);
 
                 _logger.LogInformation("Received reconstruct file request: {Message}", message);
+                System.Console.WriteLine($"🔍 RAW MESSAGE: {message}");
 
-                // Parse request
-                var request = JsonSerializer.Deserialize<ReconstructFileRequest>(message);
-                if (request == null)
+                // Parse request - try flexible parsing
+                string requestId = "";
+                string fileId = "";
+                string outputPath = "";
+                
+                try
                 {
-                    _logger.LogError("Failed to deserialize reconstruct file request");
+                    // First try standard format
+                    var request = JsonSerializer.Deserialize<ReconstructFileRequest>(message);
+                    if (request != null)
+                    {
+                        requestId = request.RequestId;
+                        fileId = request.FileId;
+                        outputPath = request.OutputPath ?? "";
+                    }
+                    
+                    // If OutputPath is still empty, try parsing as dynamic JSON
+                    if (string.IsNullOrEmpty(outputPath))
+                    {
+                        using var doc = JsonDocument.Parse(message);
+                        var root = doc.RootElement;
+                        
+                        requestId = root.TryGetProperty("RequestId", out var reqId) ? reqId.GetString() ?? "" : "";
+                        fileId = root.TryGetProperty("FileId", out var fId) ? fId.GetString() ?? "" : "";
+                        
+                        // Try both OutputPath and OutputFileName
+                        if (root.TryGetProperty("OutputPath", out var outPath))
+                        {
+                            outputPath = outPath.GetString() ?? "";
+                        }
+                        else if (root.TryGetProperty("OutputFileName", out var outFileName))
+                        {
+                            outputPath = outFileName.GetString() ?? "";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Failed to parse reconstruct file request");
                     _channel.BasicNack(ea.DeliveryTag, false, true);
                     return;
                 }
+
+                if (string.IsNullOrEmpty(fileId))
+                {
+                    _logger.LogError("Invalid request - missing FileId");
+                    _channel.BasicNack(ea.DeliveryTag, false, true);
+                    return;
+                }
+
+                System.Console.WriteLine($"🔍 PARSED REQUEST:");
+                System.Console.WriteLine($"   - RequestId: {requestId}");
+                System.Console.WriteLine($"   - FileId: {fileId}");
+                System.Console.WriteLine($"   - OutputPath: '{outputPath}'");
 
                 // Default output directory
                 var outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "output");
@@ -69,7 +120,7 @@ public class ReconstructFileRequestConsumer : IDisposable
                 }
                 
                 // Handle the OutputPath - ALWAYS use the filename provided by user
-                var userInput = request.OutputPath?.Trim() ?? "";
+                var userInput = outputPath?.Trim() ?? "";
                 string fileName;
                 
                 if (!string.IsNullOrEmpty(userInput))
@@ -89,8 +140,8 @@ public class ReconstructFileRequestConsumer : IDisposable
                 else
                 {
                     // Only if user provided nothing at all, use original filename
-                    var fileEntity = await _chunkService.GetFileInfoAsync(request.FileId);
-                    fileName = fileEntity?.FileName ?? $"reconstructed_{request.FileId}_{DateTime.Now:yyyyMMdd_HHmmss}";
+                    var fileEntity = await _chunkService.GetFileInfoAsync(fileId);
+                    fileName = fileEntity?.FileName ?? $"reconstructed_{fileId}_{DateTime.Now:yyyyMMdd_HHmmss}";
                     _logger.LogInformation("No filename provided, using original filename: {FileName}", fileName);
                     System.Console.WriteLine($"📝 No filename provided, using original filename: {fileName}");
                 }
@@ -101,16 +152,16 @@ public class ReconstructFileRequestConsumer : IDisposable
                 System.Console.WriteLine($"📁 Reconstructing to: {fullOutputPath}");
                 
                 // Process the request
-                var success = await _chunkService.ReconstructFileAsync(request.FileId, fullOutputPath);
+                var success = await _chunkService.ReconstructFileAsync(fileId, fullOutputPath);
 
                 // Create response
                 var response = new ReconstructFileResponse
                 {
-                    RequestId = request.RequestId,
-                    FileId = request.FileId,
-                    OutputPath = fullOutputPath,  // Full path including Output2
+                    RequestId = requestId,
+                    FileId = fileId,
+                    OutputPath = fullOutputPath,
                     Success = success,
-                    Message = success ? $"File reconstructed successfully to Output2/{request.OutputPath}" : "Failed to reconstruct file",
+                    Message = success ? $"File reconstructed successfully to output/{fileName}" : "Failed to reconstruct file",
                     Timestamp = DateTime.UtcNow
                 };
 

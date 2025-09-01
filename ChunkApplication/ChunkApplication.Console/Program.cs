@@ -415,6 +415,9 @@ class Program
             var messageJson = System.Text.Json.JsonSerializer.Serialize(request);
             var body = System.Text.Encoding.UTF8.GetBytes(messageJson);
             
+            // Debug: Show what we're sending
+            System.Console.WriteLine($"🔍 SENDING MESSAGE: {messageJson}");
+            
             channel.BasicPublish(
                 exchange: "",
                 routingKey: "ReconstructFileRequest",

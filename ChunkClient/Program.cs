@@ -271,7 +271,7 @@ class Program
             var message = new ReconstructFileMessage
             {
                 FileId = selectedFile.Id,
-                OutputFileName = fileName,
+                OutputPath = fileName,
                 RequestId = Guid.NewGuid().ToString(),
                 Timestamp = DateTime.UtcNow
             };
@@ -284,7 +284,7 @@ class Program
             Console.WriteLine($"\nReconstruct file request sent successfully!");
             Console.WriteLine($"Request ID: {message.RequestId}");
             Console.WriteLine($"File ID: {message.FileId}");
-            Console.WriteLine($"Output File: {message.OutputFileName}");
+            Console.WriteLine($"Output File: {message.OutputPath}");
             Console.WriteLine($"Timestamp: {message.Timestamp:yyyy-MM-dd HH:mm:ss}");
         }
         catch (Exception ex)
