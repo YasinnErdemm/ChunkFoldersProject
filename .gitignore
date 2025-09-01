@@ -54,6 +54,9 @@ DocumentLayout*.json
 *.AssemblyInfo.cs
 *.AssemblyInfoInputs.cache
 *.sourcelink.json
+*.CoreCompileInputs.cache
+**/ref/**
+**/refint/**
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
