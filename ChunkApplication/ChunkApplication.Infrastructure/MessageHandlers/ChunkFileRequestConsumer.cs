@@ -31,21 +31,21 @@ public class ChunkFileRequestConsumer : IDisposable
         _chunkService = chunkService ?? throw new ArgumentNullException(nameof(chunkService));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-        _logger.LogInformation("🔧 ChunkFileRequestConsumer constructor started");
+        _logger.LogInformation(" ChunkFileRequestConsumer constructor started");
         
         try
         {
             _channel = _connection.CreateModel();
-            _logger.LogInformation("✅ RabbitMQ channel created successfully");
+            _logger.LogInformation(" RabbitMQ channel created successfully");
             
             SetupQueues();
             SetupConsumer();
             
-            _logger.LogInformation("🎯 ChunkFileRequestConsumer is ready and listening on queue: {QueueName}", _queueName);
+            _logger.LogInformation(" ChunkFileRequestConsumer is ready and listening on queue: {QueueName}", _queueName);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "❌ FAILED to initialize ChunkFileRequestConsumer");
+            _logger.LogError(ex, " FAILED to initialize ChunkFileRequestConsumer");
             throw;
         }
     }
@@ -77,8 +77,8 @@ public class ChunkFileRequestConsumer : IDisposable
         {
             var requestId = string.Empty;
             
-            _logger.LogInformation("🔔 MESSAGE RECEIVED! Processing chunk file request...");
-            System.Console.WriteLine("🔔 MESSAGE RECEIVED! Processing chunk file request...");
+            _logger.LogInformation(" MESSAGE RECEIVED! Processing chunk file request...");
+            System.Console.WriteLine(" MESSAGE RECEIVED! Processing chunk file request...");
             
             try
             {
@@ -88,7 +88,7 @@ public class ChunkFileRequestConsumer : IDisposable
                 
                 if (message == null)
                 {
-                    _logger.LogError("❌ Failed to deserialize message");
+                    _logger.LogError(" Failed to deserialize message");
                     return;
                 }
 
@@ -98,28 +98,28 @@ public class ChunkFileRequestConsumer : IDisposable
                     .Where(p => !string.IsNullOrEmpty(p))
                     .ToList();
                 
-                _logger.LogInformation("🎯 Processing {FileCount} files from: {RequestId}", filePaths.Count, requestId);
-                System.Console.WriteLine($"🎯 Processing {filePaths.Count} files from: {requestId}");
+                _logger.LogInformation(" Processing {FileCount} files from: {RequestId}", filePaths.Count, requestId);
+                System.Console.WriteLine($" Processing {filePaths.Count} files from: {requestId}");
 
                 foreach (var filePath in filePaths)
                 {
                     try
                     {
-                        System.Console.WriteLine($"📁 Chunking: {filePath}");
+                        System.Console.WriteLine($" Chunking: {filePath}");
                         var fileEntity = _chunkService.ChunkFileAsync(filePath).Result;
-                        System.Console.WriteLine($"✅ Chunked: {fileEntity.FileName} → {fileEntity.TotalChunks} chunks");
+                        System.Console.WriteLine($" Chunked: {fileEntity.FileName} → {fileEntity.TotalChunks} chunks");
                     }
                     catch (Exception fileEx)
                     {
-                        System.Console.WriteLine($"❌ Failed: {filePath} - {fileEx.Message}");
+                        System.Console.WriteLine($" Failed: {filePath} - {fileEx.Message}");
                     }
                 }
                 
-                System.Console.WriteLine($"🎉 BATCH DONE: {requestId}");
+                System.Console.WriteLine($" BATCH DONE: {requestId}");
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine($"❌ ERROR: {requestId} - {ex.Message}");
+                System.Console.WriteLine($" ERROR: {requestId} - {ex.Message}");
             }
         };
 
@@ -131,32 +131,7 @@ public class ChunkFileRequestConsumer : IDisposable
             consumer: consumer);
 
         _logger.LogInformation("Consumer setup completed for queue: {QueueName} with prefetch: 10", _queueName);
-        System.Console.WriteLine($"🎯 Consumer ready for queue: {_queueName} (prefetch: 10)");
-    }
-
-    private async Task SendResponseAsync(FileProcessingResponse response)
-    {
-        try
-        {
-            var responseJson = JsonSerializer.Serialize(response);
-            var responseBody = System.Text.Encoding.UTF8.GetBytes(responseJson);
-
-            var properties = _channel.CreateBasicProperties();
-            properties.Persistent = true;
-
-            _channel.BasicPublish(
-                exchange: "",
-                routingKey: _responseQueueName,
-                basicProperties: properties,
-                body: responseBody);
-
-            _logger.LogDebug("Sent response for request: {RequestId}, Success: {Success}", 
-                response.RequestId, response.Success);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error sending response for request: {RequestId}", response.RequestId);
-        }
+        System.Console.WriteLine($" Consumer ready for queue: {_queueName} (prefetch: 10)");
     }
 
     public void Dispose()

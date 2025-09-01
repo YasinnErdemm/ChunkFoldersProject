@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
+using ChunkApplication.Domain.Entities;
 
 namespace ChunkApplication.Console;
 
@@ -39,14 +40,14 @@ class Program
             _logger.LogInformation("Console application is running. Press any key to exit...");
             
             System.Console.WriteLine("\n" + "=".PadRight(50, '='));
-            System.Console.WriteLine("🚀 CHUNK APPLICATION CONSOLE STARTED");
+            System.Console.WriteLine(" CHUNK APPLICATION CONSOLE STARTED");
             System.Console.WriteLine("=".PadRight(50, '='));
-            System.Console.WriteLine("✅ RabbitMQ Consumers: ACTIVE");
-            System.Console.WriteLine("✅ Database: CONNECTED");
-            System.Console.WriteLine("🔍 Listening for messages...");
+            System.Console.WriteLine(" RabbitMQ Consumers: ACTIVE");
+            System.Console.WriteLine(" Database: CONNECTED");
+            System.Console.WriteLine(" Listening for messages...");
             System.Console.WriteLine("=".PadRight(50, '='));
-            System.Console.WriteLine("📝 Check console logs above for consumer status");
-            System.Console.WriteLine("🔔 Watch for 'MESSAGE RECEIVED!' logs when processing");
+            System.Console.WriteLine(" Check console logs above for consumer status");
+            System.Console.WriteLine(" Watch for 'MESSAGE RECEIVED!' logs when processing");
             System.Console.WriteLine("=".PadRight(50, '='));
             System.Console.WriteLine("\nPress any key to exit...");
             System.Console.ReadKey();
@@ -93,8 +94,8 @@ class Program
 
         services.AddScoped<FileRepository>();
         services.AddScoped<ChunkRepository>();
-        services.AddScoped<IRepository<ChunkApplication.Domain.Entities.Files>>(provider => provider.GetRequiredService<FileRepository>());
-        services.AddScoped<IRepository<ChunkApplication.Domain.Entities.Chunks>>(provider => provider.GetRequiredService<ChunkRepository>());
+        services.AddScoped<IRepository<Files>>(provider => provider.GetRequiredService<FileRepository>());
+        services.AddScoped<IRepository<Chunks>>(provider => provider.GetRequiredService<ChunkRepository>());
 
         services.AddScoped<IStorageProvider, FileSystemStorageProvider>();
         services.AddScoped<IStorageProvider, DatabaseStorageProvider>();
@@ -129,33 +130,33 @@ class Program
     {
         try
         {
-            _logger.LogInformation("🚀 Starting RabbitMQ consumers...");
+            _logger.LogInformation(" Starting RabbitMQ consumers...");
             _rabbitMqConnection = _serviceProvider.GetRequiredService<IConnection>();
-            _logger.LogInformation("✅ RabbitMQ connection obtained successfully");
+            _logger.LogInformation(" RabbitMQ connection obtained successfully");
             _consumerScope = _serviceProvider.CreateScope();
-            _logger.LogInformation("✅ Consumer scope created");
-            _logger.LogInformation("📡 Starting ChunkFileRequestConsumer...");
+            _logger.LogInformation(" Consumer scope created");
+            _logger.LogInformation(" Starting ChunkFileRequestConsumer...");
             var chunkConsumer = _consumerScope.ServiceProvider.GetRequiredService<ChunkFileRequestConsumer>();
-            _logger.LogInformation("✅ ChunkFileRequestConsumer started");
-            _logger.LogInformation("📡 Starting GetFileInfoRequestConsumer...");
+            _logger.LogInformation(" ChunkFileRequestConsumer started");
+            _logger.LogInformation(" Starting GetFileInfoRequestConsumer...");
             var getFileInfoConsumer = _consumerScope.ServiceProvider.GetRequiredService<GetFileInfoRequestConsumer>();
-            _logger.LogInformation("✅ GetFileInfoRequestConsumer started");
-            _logger.LogInformation("📡 Starting ListFilesRequestConsumer...");
+            _logger.LogInformation("GetFileInfoRequestConsumer started");
+            _logger.LogInformation(" Starting ListFilesRequestConsumer...");
             var listFilesConsumer = _consumerScope.ServiceProvider.GetRequiredService<ListFilesRequestConsumer>();
-            _logger.LogInformation("✅ ListFilesRequestConsumer started");
-            _logger.LogInformation("📡 Starting DeleteFileRequestConsumer...");
+            _logger.LogInformation(" ListFilesRequestConsumer started");
+            _logger.LogInformation("Starting DeleteFileRequestConsumer...");
             var deleteFileConsumer = _consumerScope.ServiceProvider.GetRequiredService<DeleteFileRequestConsumer>();
-            _logger.LogInformation("✅ DeleteFileRequestConsumer started");
-            _logger.LogInformation("📡 Starting ReconstructFileRequestConsumer...");
+            _logger.LogInformation(" DeleteFileRequestConsumer started");
+            _logger.LogInformation(" Starting ReconstructFileRequestConsumer...");
             var reconstructConsumer = _consumerScope.ServiceProvider.GetRequiredService<ReconstructFileRequestConsumer>();
-            _logger.LogInformation("✅ ReconstructFileRequestConsumer started");
-            _logger.LogInformation("🎉 All RabbitMQ consumers started successfully!");
-            _logger.LogInformation("🔍 Consumers are now listening for messages...");
+            _logger.LogInformation(" ReconstructFileRequestConsumer started");
+            _logger.LogInformation(" All RabbitMQ consumers started successfully!");
+            _logger.LogInformation(" Consumers are now listening for messages...");
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "❌ CRITICAL: Failed to start RabbitMQ consumers!");
-            System.Console.WriteLine($"❌ CONSUMER START FAILED: {ex.Message}");
+            _logger.LogError(ex, " CRITICAL: Failed to start RabbitMQ consumers!");
+            System.Console.WriteLine($" CONSUMER START FAILED: {ex.Message}");
             System.Console.WriteLine($"Stack Trace: {ex.StackTrace}");
         }
     }
@@ -192,297 +193,5 @@ class Program
             _logger.LogError(ex, "❌ Consumer connectivity test failed");
             System.Console.WriteLine($"❌ Consumer Test Failed: {ex.Message}");
         }
-    }
-
-    private static async Task RunMainMenu()
-    {
-        while (true)
-        {
-            System.Console.Clear();
-            System.Console.WriteLine("=== Chunk Application Console ===");
-            System.Console.WriteLine("1. Send chunk file request");
-            System.Console.WriteLine("2. List all files");
-            System.Console.WriteLine("3. Get file info");
-            System.Console.WriteLine("4. Reconstruct file");
-            System.Console.WriteLine("5. Delete file");
-            System.Console.WriteLine("0. Exit");
-            System.Console.Write("\nSelect an option: ");
-
-            var choice = System.Console.ReadLine();
-
-            try
-            {
-                switch (choice)
-                {
-                    case "1":
-                        await HandleChunkFileRequest();
-                        break;
-                    case "2":
-                        await HandleListFiles();
-                        break;
-                    case "3":
-                        await HandleGetFileInfo();
-                        break;
-                    case "4":
-                        await HandleReconstructFile();
-                        break;
-                    case "5":
-                        await HandleDeleteFile();
-                        break;
-                    case "0":
-                        return;
-                    default:
-                        System.Console.WriteLine("Invalid option. Press any key to continue...");
-                        System.Console.ReadKey();
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error in menu option {Choice}", choice);
-                System.Console.WriteLine($"Error: {ex.Message}");
-                System.Console.WriteLine("Press any key to continue...");
-                System.Console.ReadKey();
-            }
-        }
-    }
-
-    private static async Task HandleChunkFileRequest()
-    {
-        System.Console.Write("Enter file path (or multiple paths separated by commas): ");
-        var input = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(input))
-        {
-            System.Console.WriteLine("Invalid file path.");
-            return;
-        }
-
-        var filePaths = input.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                           .Select(p => p.Trim())
-                           .Where(p => !string.IsNullOrWhiteSpace(p))
-                           .ToList();
-
-        if (!filePaths.Any())
-        {
-            System.Console.WriteLine("No valid file paths provided.");
-            return;
-        }
-
-        System.Console.WriteLine($"Processing {filePaths.Count} file(s)...");
-
-        foreach (var filePath in filePaths)
-        {
-            try
-            {
-                if (!File.Exists(filePath))
-                {
-                    System.Console.WriteLine($"File not found: {filePath}");
-                    continue;
-                }
-
-                var fileInfo = new System.IO.FileInfo(filePath);
-
-                System.Console.WriteLine($"Processing: {fileInfo.Name} ({fileInfo.Length} bytes)");
-
-                var fileEntity = await _chunkService.ChunkFileAsync(filePath);
-
-                System.Console.WriteLine($"✓ Successfully chunked: {fileEntity.FileName}");
-                System.Console.WriteLine($"  File ID: {fileEntity.Id}");
-                System.Console.WriteLine($"  Total Chunks: {fileEntity.TotalChunks}");
-                System.Console.WriteLine($"  Checksum: {fileEntity.Checksum}");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error processing file: {FilePath}", filePath);
-                System.Console.WriteLine($"✗ Error processing {filePath}: {ex.Message}");
-            }
-        }
-
-        System.Console.WriteLine("\nPress any key to continue...");
-        System.Console.ReadKey();
-    }
-
-    private static async Task HandleListFiles()
-    {
-        var files = await _chunkService.ListFilesAsync();
-
-        if (!files.Any())
-        {
-            System.Console.WriteLine("No files found.");
-        }
-        else
-        {
-            System.Console.WriteLine($"Found {files.Count()} file(s):\n");
-            
-            foreach (var file in files)
-            {
-                System.Console.WriteLine($"File: {file.FileName}");
-                System.Console.WriteLine($"  ID: {file.Id}");
-                System.Console.WriteLine($"  Size: {file.FileSize} bytes");
-                System.Console.WriteLine($"  Chunks: {file.TotalChunks}");
-                System.Console.WriteLine($"  Created: {file.CreatedAt:yyyy-MM-dd HH:mm:ss}");
-                System.Console.WriteLine($"  Complete: {(file.IsComplete() ? "Yes" : "No")}");
-                System.Console.WriteLine();
-            }
-        }
-
-        System.Console.WriteLine("Press any key to continue...");
-        System.Console.ReadKey();
-    }
-
-    private static async Task HandleGetFileInfo()
-    {
-        System.Console.Write("Enter file ID: ");
-        var fileId = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(fileId))
-        {
-            System.Console.WriteLine("Invalid file ID.");
-            return;
-        }
-
-        var file = await _chunkService.GetFileInfoAsync(fileId);
-
-        if (file == null)
-        {
-            System.Console.WriteLine("File not found.");
-        }
-        else
-        {
-            System.Console.WriteLine($"File Information:");
-            System.Console.WriteLine($"  Name: {file.FileName}");
-            System.Console.WriteLine($"  ID: {file.Id}");
-            System.Console.WriteLine($"  Size: {file.FileSize} bytes");
-            System.Console.WriteLine($"  Chunks: {file.TotalChunks}");
-            System.Console.WriteLine($"  Created: {file.CreatedAt:yyyy-MM-dd HH:mm:ss}");
-            System.Console.WriteLine($"  Complete: {(file.IsComplete() ? "Yes" : "No")}");
-            System.Console.WriteLine($"  Integrity: {(file.ValidateIntegrity() ? "Valid" : "Invalid")}");
-        }
-
-        System.Console.WriteLine("\nPress any key to continue...");
-        System.Console.ReadKey();
-    }
-
-    private static async Task HandleReconstructFile()
-    {
-        System.Console.Write("Enter file ID: ");
-        var fileId = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(fileId))
-        {
-            System.Console.WriteLine("Invalid file ID.");
-            return;
-        }
-
-        // Get file info to suggest a filename
-        var fileInfo = await _chunkService.GetFileInfoAsync(fileId);
-        if (fileInfo == null)
-        {
-            System.Console.WriteLine("File not found.");
-            return;
-        }
-
-        System.Console.WriteLine($"Original filename: {fileInfo.FileName}");
-        System.Console.Write($"Enter output filename (default: {fileInfo.FileName}): ");
-        var outputFileName = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(outputFileName))
-        {
-            outputFileName = fileInfo.FileName;
-        }
-
-        System.Console.WriteLine("Reconstructing file...");
-
-        // Send RabbitMQ message instead of direct service call
-        try
-        {
-            var channel = _rabbitMqConnection.CreateModel();
-            
-            // Create the request message
-            var request = new
-            {
-                RequestId = Guid.NewGuid().ToString(),
-                FileId = fileId,
-                OutputPath = outputFileName, // This is the filename user provided
-                Timestamp = DateTime.UtcNow
-            };
-
-            // Declare the queue
-            channel.QueueDeclare("ReconstructFileRequest", durable: true, exclusive: false, autoDelete: false);
-
-            // Serialize and send the message
-            var messageJson = System.Text.Json.JsonSerializer.Serialize(request);
-            var body = System.Text.Encoding.UTF8.GetBytes(messageJson);
-            
-            // Debug: Show what we're sending
-            System.Console.WriteLine($"🔍 SENDING MESSAGE: {messageJson}");
-            
-            channel.BasicPublish(
-                exchange: "",
-                routingKey: "ReconstructFileRequest",
-                basicProperties: null,
-                body: body);
-
-            System.Console.WriteLine($"✓ Reconstruction request sent successfully!");
-            System.Console.WriteLine($"Request ID: {request.RequestId}");
-            System.Console.WriteLine($"File ID: {request.FileId}");
-            System.Console.WriteLine($"Output filename: {request.OutputPath}");
-            System.Console.WriteLine("📡 Check the server console for reconstruction progress...");
-            
-            channel.Close();
-        }
-        catch (Exception ex)
-        {
-            System.Console.WriteLine($"✗ Failed to send reconstruction request: {ex.Message}");
-        }
-
-        System.Console.WriteLine("\nPress any key to continue...");
-        System.Console.ReadKey();
-    }
-
-    private static async Task HandleDeleteFile()
-    {
-        System.Console.Write("Enter file ID: ");
-        var fileId = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(fileId))
-        {
-            System.Console.WriteLine("Invalid file ID.");
-            return;
-        }
-
-        System.Console.Write("Are you sure you want to delete this file? (y/N): ");
-        var confirm = System.Console.ReadLine()?.ToLower();
-
-        if (confirm != "y")
-        {
-            System.Console.WriteLine("Deletion cancelled.");
-            return;
-        }
-
-        System.Console.WriteLine("Deleting file...");
-
-        var success = await _chunkService.DeleteFileAsync(fileId);
-
-        if (success)
-        {
-            System.Console.WriteLine("✓ File deleted successfully.");
-        }
-        else
-        {
-            System.Console.WriteLine("✗ Failed to delete file.");
-        }
-
-        System.Console.WriteLine("\nPress any key to continue...");
-        System.Console.ReadKey();
-    }
-
-    private static async Task<string> CalculateChecksumAsync(string filePath)
-    {
-        using var sha256 = SHA256.Create();
-        using var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-        var hash = await sha256.ComputeHashAsync(stream);
-        return Convert.ToHexString(hash).ToLower();
     }
 }

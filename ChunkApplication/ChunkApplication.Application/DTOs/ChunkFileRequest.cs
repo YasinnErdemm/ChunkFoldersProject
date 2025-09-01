@@ -6,5 +6,4 @@ public class ChunkFileRequest
     public string FileName { get; set; } = string.Empty;
     public long FileSize { get; set; }
     public string Checksum { get; set; } = string.Empty;
-    //denemeeee
 }

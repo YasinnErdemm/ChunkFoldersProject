@@ -9,6 +9,7 @@ using RabbitMQ.Client.Events;
 using System.Collections.Generic;
 using System.Linq;
 using ChunkApplication.Domain.Interfaces;
+using ChunkApplication.ChunkApplication.Infrastructure.MessageHandlers.Models;
 
 namespace ChunkApplication.Infrastructure.MessageHandlers;
 
@@ -49,7 +50,7 @@ public class ListFilesRequestConsumer : IDisposable
                 var response = new FileListResponse
                 {
                     RequestId = Guid.NewGuid().ToString(),
-                    Files = files.Select(f => new FileInfo
+                    Files = files.Select(f => new ChunkApplication.Infrastructure.MessageHandlers.Models.FileInfo
                     {
                         Id = f.Id,
                         FileName = f.FileName,
@@ -94,21 +95,3 @@ public class ListFilesRequestConsumer : IDisposable
     }
 }
 
-public class FileInfo
-{
-    public string Id { get; set; } = string.Empty;
-    public string FileName { get; set; } = string.Empty;
-    public long FileSize { get; set; }
-    public int TotalChunks { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public bool IsComplete { get; set; }
-}
-
-public class FileListResponse
-{
-    public string RequestId { get; set; } = string.Empty;
-    public List<FileInfo> Files { get; set; } = new();
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}

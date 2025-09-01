@@ -2,7 +2,9 @@ using System;
 using System.Text;
 using System.Text.Json;
 using ChunkApplication.Application.Services;
+using ChunkApplication.ChunkApplication.Infrastructure.MessageHandlers.Models;
 using ChunkApplication.Domain.Interfaces;
+using ChunkApplication.Infrastructure.MessageHandlers.Models;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -88,18 +90,6 @@ public class DeleteFileRequestConsumer : IDisposable
     }
 }
 
-public class DeleteFileRequest
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
 
-public class DeleteFileResponse
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
+
+

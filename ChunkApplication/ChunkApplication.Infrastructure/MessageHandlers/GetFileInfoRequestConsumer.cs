@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.Text.Json;
 using ChunkApplication.Application.Services;
+using ChunkApplication.ChunkApplication.Infrastructure.MessageHandlers.Models;
 using ChunkApplication.Domain.Interfaces;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
@@ -98,24 +99,6 @@ public class GetFileInfoRequestConsumer : IDisposable
     }
 }
 
-public class GetFileInfoRequest
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
 
-public class GetFileInfoResponse
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public string FileName { get; set; } = string.Empty;
-    public long FileSize { get; set; }
-    public int TotalChunks { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public bool IsComplete { get; set; }
-    public bool Integrity { get; set; }
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
+
+
