@@ -10,6 +10,7 @@ x86/
 
 # Visual Studio
 .vs/
+**/.vs/
 *.user
 *.suo
 *.cache
@@ -20,6 +21,8 @@ x86/
 *.pidb
 *.svclog
 *.scc
+*.backup.json
+DocumentLayout*.json
 
 # User-specific files
 *.rsuser
@@ -48,6 +51,9 @@ x86/
 *.tmp_proj
 *_wpftmp.csproj
 *.tlog
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.sourcelink.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
