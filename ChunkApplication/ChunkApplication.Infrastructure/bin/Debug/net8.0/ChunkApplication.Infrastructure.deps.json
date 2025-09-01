@@ -639,7 +639,7 @@
         "runtime": {
           "ChunkApplication.Application.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -647,7 +647,7 @@
         "runtime": {
           "ChunkApplication.Domain.dll": {
             "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       }
