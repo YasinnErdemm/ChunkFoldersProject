@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj",
       "projectName": "ChunkApplication.Domain",
-      "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj",
+      "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj",
       "packagesPath": "C:\\Users\\MONSTER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\obj\\",
+      "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

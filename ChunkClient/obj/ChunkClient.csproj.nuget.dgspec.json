@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\ChunkClient.csproj": {}
+    "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\ChunkClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\ChunkClient.csproj": {
+    "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\ChunkClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\ChunkClient.csproj",
+        "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\ChunkClient.csproj",
         "projectName": "ChunkClient",
-        "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\ChunkClient.csproj",
+        "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\ChunkClient.csproj",
         "packagesPath": "C:\\Users\\MONSTER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\obj\\",
+        "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

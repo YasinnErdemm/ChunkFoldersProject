@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CWwgl1kax5k=",
+  "dgSpecHash": "4lfHuUH/g30=",
   "success": true,
-  "projectFilePath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.csproj",
+  "projectFilePath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MONSTER\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\MONSTER\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

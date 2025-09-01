@@ -5409,11 +5409,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.csproj",
+      "projectUniqueName": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.csproj",
       "projectName": "ChunkApplication",
-      "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.csproj",
+      "projectPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.csproj",
       "packagesPath": "C:\\Users\\MONSTER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\obj\\",
+      "outputPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

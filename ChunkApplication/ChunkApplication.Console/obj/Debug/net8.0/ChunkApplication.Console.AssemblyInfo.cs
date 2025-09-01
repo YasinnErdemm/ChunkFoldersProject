@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChunkApplication.Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e3cc8b58a33e1ff2e57121d7a8dbd10ffaff7b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e62635a1242cdc910be2b8433d09a5ee8140b47")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChunkApplication.Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChunkApplication.Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
