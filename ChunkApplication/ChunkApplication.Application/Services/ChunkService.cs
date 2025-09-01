@@ -277,8 +277,6 @@ public class ChunkService : IChunkService
                 storagePath,
                 chunkChecksum
             );
-
-            // Save chunk metadata
             await _chunkRepository.AddAsync(chunk);
             fileEntity.AddChunk(chunk);
 
@@ -304,41 +302,40 @@ public class ChunkService : IChunkService
             if (fileSize < 64 * 1024)
             {
                 optimalChunkSize = Math.Max(1024, (int)(fileSize / 2)); 
-                targetChunks = 2; // Her zaman 2 chunk
+                targetChunks = 2; 
             }
-            else if (fileSize < 256 * 1024) // 256 KB'dan küçük
+            else if (fileSize < 256 * 1024) 
             {
-                optimalChunkSize = 128 * 1024; // 128 KB
+                optimalChunkSize = 128 * 1024; 
                 targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
             }
             else
             {
-                optimalChunkSize = 256 * 1024; // 256 KB
+                optimalChunkSize = 256 * 1024; 
                 targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
             }
         }
         else if (fileSize < fiveMB)
         {
-            optimalChunkSize = 512 * 1024; // 512 KB
+            optimalChunkSize = 512 * 1024; 
             targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
         }
         else if (fileSize < tenMB)
         {
-            optimalChunkSize = 1024 * 1024; // 1 MB
+            optimalChunkSize = 1024 * 1024; 
             targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
         }
         else if (fileSize < hundredMB)
         {
-            optimalChunkSize = 2 * 1024 * 1024; // 2 MB
+            optimalChunkSize = 2 * 1024 * 1024; 
             targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
         }
         else
         {
-            optimalChunkSize = 5 * 1024 * 1024; // 5 MB
+            optimalChunkSize = 5 * 1024 * 1024; 
             targetChunks = (int)Math.Ceiling((double)fileSize / optimalChunkSize);
         }
 
-        // Minimum 2 chunk garantisi
         if (targetChunks < 2) targetChunks = 2;
 
         return (optimalChunkSize, targetChunks);
