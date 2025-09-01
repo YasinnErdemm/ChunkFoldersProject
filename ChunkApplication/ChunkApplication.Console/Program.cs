@@ -375,26 +375,63 @@ class Program
             return;
         }
 
-        System.Console.Write("Enter output path: ");
-        var outputPath = System.Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(outputPath))
+        // Get file info to suggest a filename
+        var fileInfo = await _chunkService.GetFileInfoAsync(fileId);
+        if (fileInfo == null)
         {
-            System.Console.WriteLine("Invalid output path.");
+            System.Console.WriteLine("File not found.");
             return;
+        }
+
+        System.Console.WriteLine($"Original filename: {fileInfo.FileName}");
+        System.Console.Write($"Enter output filename (default: {fileInfo.FileName}): ");
+        var outputFileName = System.Console.ReadLine();
+
+        if (string.IsNullOrWhiteSpace(outputFileName))
+        {
+            outputFileName = fileInfo.FileName;
         }
 
         System.Console.WriteLine("Reconstructing file...");
 
-        var success = await _chunkService.ReconstructFileAsync(fileId, outputPath);
+        // Send RabbitMQ message instead of direct service call
+        try
+        {
+            var channel = _rabbitMqConnection.CreateModel();
+            
+            // Create the request message
+            var request = new
+            {
+                RequestId = Guid.NewGuid().ToString(),
+                FileId = fileId,
+                OutputPath = outputFileName, // This is the filename user provided
+                Timestamp = DateTime.UtcNow
+            };
 
-        if (success)
-        {
-            System.Console.WriteLine($"✓ File reconstructed successfully to: {outputPath}");
+            // Declare the queue
+            channel.QueueDeclare("ReconstructFileRequest", durable: true, exclusive: false, autoDelete: false);
+
+            // Serialize and send the message
+            var messageJson = System.Text.Json.JsonSerializer.Serialize(request);
+            var body = System.Text.Encoding.UTF8.GetBytes(messageJson);
+            
+            channel.BasicPublish(
+                exchange: "",
+                routingKey: "ReconstructFileRequest",
+                basicProperties: null,
+                body: body);
+
+            System.Console.WriteLine($"✓ Reconstruction request sent successfully!");
+            System.Console.WriteLine($"Request ID: {request.RequestId}");
+            System.Console.WriteLine($"File ID: {request.FileId}");
+            System.Console.WriteLine($"Output filename: {request.OutputPath}");
+            System.Console.WriteLine("📡 Check the server console for reconstruction progress...");
+            
+            channel.Close();
         }
-        else
+        catch (Exception ex)
         {
-            System.Console.WriteLine("✗ Failed to reconstruct file.");
+            System.Console.WriteLine($"✗ Failed to send reconstruction request: {ex.Message}");
         }
 
         System.Console.WriteLine("\nPress any key to continue...");

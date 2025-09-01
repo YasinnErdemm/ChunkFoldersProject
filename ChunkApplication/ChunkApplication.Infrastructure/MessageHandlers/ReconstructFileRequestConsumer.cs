@@ -68,8 +68,33 @@ public class ReconstructFileRequestConsumer : IDisposable
                     _logger.LogInformation("Created output directory: {OutputDirectory}", outputDirectory);
                 }
                 
-                // request.OutputPath is the filename user provided
-                var fileName = request.OutputPath;
+                // Handle the OutputPath - ALWAYS use the filename provided by user
+                var userInput = request.OutputPath?.Trim() ?? "";
+                string fileName;
+                
+                if (!string.IsNullOrEmpty(userInput))
+                {
+                    // User provided a filename - ALWAYS use it (even if it's "output")
+                    fileName = Path.GetFileName(userInput);
+                    
+                    // If user just wrote "output", treat it as "output.txt"
+                    if (string.IsNullOrEmpty(fileName) || fileName.Equals("output", StringComparison.OrdinalIgnoreCase))
+                    {
+                        fileName = "output.txt";
+                    }
+                    
+                    _logger.LogInformation("Using user-provided filename: {FileName}", fileName);
+                    System.Console.WriteLine($"📝 Using user-provided filename: {fileName}");
+                }
+                else
+                {
+                    // Only if user provided nothing at all, use original filename
+                    var fileEntity = await _chunkService.GetFileInfoAsync(request.FileId);
+                    fileName = fileEntity?.FileName ?? $"reconstructed_{request.FileId}_{DateTime.Now:yyyyMMdd_HHmmss}";
+                    _logger.LogInformation("No filename provided, using original filename: {FileName}", fileName);
+                    System.Console.WriteLine($"📝 No filename provided, using original filename: {fileName}");
+                }
+                
                 var fullOutputPath = Path.Combine(outputDirectory, fileName);
                 
                 _logger.LogInformation("Reconstructing file to: {OutputPath}", fullOutputPath);
