@@ -1,133 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\",
+  "WorkspaceRootPath": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.application\\dtos\\chunkfilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.application\\dtos\\chunkfilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.application\\services\\chunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.application\\services\\chunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|solutionrelative:chunkapplication\\chunkapplication.application\\services\\chunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}|ChunkApplication\\ChunkApplication.Console\\ChunkApplication.Console.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}|ChunkApplication\\ChunkApplication.Console\\ChunkApplication.Console.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C72B7CB-2372-43B9-A0D7-2C89AB26FB70}|ChunkApplication\\ChunkApplication.Console\\ChunkApplication.Console.csproj|solutionrelative:chunkapplication\\chunkapplication.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.domain\\entities\\fileentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.domain\\entities\\fileentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|solutionrelative:chunkapplication\\chunkapplication.domain\\entities\\fileentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.domain\\entities\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.domain\\entities\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1FA2B15-A143-4096-AE61-6D21D9CE4FC0}|ChunkApplication\\ChunkApplication.Domain\\ChunkApplication.Domain.csproj|solutionrelative:chunkapplication\\chunkapplication.domain\\entities\\chunk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\data\\chunkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\data\\chunkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\data\\chunkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\chunkfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\chunkfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\chunkfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\deletefilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\deletefilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\deletefilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\getfileinforequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\getfileinforequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\getfileinforequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\listfilesrequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\listfilesrequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\listfilesrequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\reconstructfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\reconstructfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\reconstructfilerequestconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\repositories\\chunkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\repositories\\chunkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\repositories\\chunkrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\repositories\\filerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\storageproviders\\databasestorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\storageproviders\\databasestorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DD0BE5B-F01E-4E64-BC3B-CF4380BDACE2}|ChunkApplication\\ChunkApplication.Infrastructure\\ChunkApplication.Infrastructure.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\storageproviders\\databasestorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|solutionrelative:chunkclient\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|ChunkClient\\ChunkClient.csproj|solutionrelative:chunkclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.application\\dtos\\chunkfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.application\\dtos\\chunkfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|solutionrelative:chunkapplication\\chunkapplication.application\\dtos\\chunkfileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.application\\dtos\\chunkfilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44142349-3566-4CF1-9641-75BC93613D32}|ChunkApplication\\ChunkApplication.Application\\ChunkApplication.Application.csproj|solutionrelative:chunkapplication\\chunkapplication.application\\dtos\\chunkfilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\responses\\fileprocessingmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\responses\\fileprocessingmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\responses\\fileprocessingmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\responses\\filelistmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\responses\\filelistmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\responses\\filelistmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\requests\\reconstructfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\requests\\reconstructfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\requests\\reconstructfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\requests\\listfilesmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\requests\\listfilesmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\requests\\listfilesmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\requests\\getfileinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\requests\\getfileinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\requests\\getfileinfomessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\requests\\deletefilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\requests\\deletefilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\requests\\deletefilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\messages\\requests\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\messages\\requests\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\messages\\requests\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\storageproviders\\filesystemstorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\storageproviders\\filesystemstorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\storageproviders\\filesystemstorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\fileprocessingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\fileprocessingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\fileprocessingresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.infrastructure\\messagehandlers\\models\\chunkfilemessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.domain\\interfaces\\istorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.domain\\interfaces\\istorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.domain\\interfaces\\istorageprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.domain\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkapplication\\chunkapplication\\chunkapplication.domain\\interfaces\\ichunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|c:\\users\\monster\\source\\repos\\chunkfolderapplication\\chunkapplicationproject\\chunkfoldersproject\\chunkapplication\\chunkapplication.domain\\interfaces\\ichunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6220B95F-5FE1-4AB6-93D0-2F7716D6E2D9}|ChunkApplication\\ChunkApplication.csproj|solutionrelative:chunkapplication\\chunkapplication.domain\\interfaces\\ichunkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -138,23 +138,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\README.md",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\README.md",
               "RelativeDocumentMoniker": "ChunkApplication\\README.md",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\README.md",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\README.md",
               "RelativeToolTip": "ChunkApplication\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -164,405 +160,375 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DeleteFileRequestConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAADoAAAASAAAAAAAAAA==",
+              "Title": "ChunkFileRequestConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAgwIgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:08:28.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:07:53.536Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ChunkFileRequestConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ChunkFileRequestConsumer.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAgwIgAAAAoAAAAAAAAAA==",
+              "Title": "ChunkDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:07:53.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:07:20.826Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ChunkDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Data\\ChunkDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAvAAAAAAAAAA==",
+              "Title": "Chunk.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwGcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:07:20.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-31T19:57:49.865Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Chunk.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Entities\\Chunk.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwGcAAAAFAAAAAAAAAA==",
+              "Title": "FileEntity.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-31T19:57:49.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:05:45.31Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FileEntity.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Entities\\FileEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:05:45.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Console\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Console\\Program.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Console\\Program.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Console\\Program.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Console\\Program.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Console\\Program.cs",
               "ViewState": "AgIAAAsBAAAAAAAAAAAEwMkAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:02:24.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:02:24.708Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChunkService.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:54.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GetFileInfoRequestConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:08:54.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ListFilesRequestConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:09:21.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ReconstructFileRequestConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:09:45.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ChunkRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:10:23.737Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FileRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:10:30.714Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAkwEAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:10:38.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DatabaseStorageProvider.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
-              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAADwvxMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:10:57.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\appsettings.json",
-              "RelativeDocumentMoniker": "ChunkClient\\appsettings.json",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\appsettings.json",
-              "RelativeToolTip": "ChunkClient\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-09-01T13:20:23.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\Program.cs",
-              "RelativeDocumentMoniker": "ChunkClient\\Program.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkClient\\Program.cs",
-              "RelativeToolTip": "ChunkClient\\Program.cs",
-              "ViewState": "AgIAAMkBAAAAAAAAAAAcwNABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:18:05.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ReconstructFileMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
-              "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:29.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FileListMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
-              "RelativeToolTip": "ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:35.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FileProcessingMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
-              "RelativeToolTip": "ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:38.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 0,
               "Title": "ChunkFileRequest.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-01T13:11:45.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ListFilesMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
-              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
-              "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DeleteFileRequestConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\DeleteFileRequestConsumer.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAADoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:25.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:08:28.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChunkService.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Application\\Services\\ChunkService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:11:54.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetFileInfoRequestConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\GetFileInfoRequestConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:08:54.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ListFilesRequestConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ListFilesRequestConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:09:21.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReconstructFileRequestConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\ReconstructFileRequestConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:09:45.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChunkRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\ChunkRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:10:23.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\FileRepository.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:10:30.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\Repositories\\Repository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwEAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:10:38.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DatabaseStorageProvider.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
+              "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\DatabaseStorageProvider.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAADwvxMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:10:57.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\appsettings.json",
+              "RelativeDocumentMoniker": "ChunkClient\\appsettings.json",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\appsettings.json",
+              "RelativeToolTip": "ChunkClient\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-01T13:20:23.361Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\Program.cs",
+              "RelativeDocumentMoniker": "ChunkClient\\Program.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkClient\\Program.cs",
+              "RelativeToolTip": "ChunkClient\\Program.cs",
+              "ViewState": "AgIAAMkBAAAAAAAAAAAcwNABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:18:05.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ReconstructFileMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
+              "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\ReconstructFileMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:11:29.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FileListMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
+              "RelativeToolTip": "ChunkApplication\\Messages\\Responses\\FileListMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:11:35.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FileProcessingMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
+              "RelativeToolTip": "ChunkApplication\\Messages\\Responses\\FileProcessingMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:11:38.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ListFilesMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
+              "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
+              "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\ListFilesMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:11:25.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "ChunkFileResponse.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Application\\DTOs\\ChunkFileResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:49.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:11:49.852Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "GetFileInfoMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
               "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\GetFileInfoMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:22.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:11:22.126Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "DeleteFileMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
               "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\DeleteFileMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:18.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:11:18.652Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "ChunkFileMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
               "RelativeToolTip": "ChunkApplication\\Messages\\Requests\\ChunkFileMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:14.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:11:14.538Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "FileSystemStorageProvider.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\StorageProviders\\FileSystemStorageProvider.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:11:04.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:11:04.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "FileProcessingResponse.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\FileProcessingResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:07:48.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:07:48.625Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "ChunkFileMessage.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Infrastructure\\MessageHandlers\\Models\\ChunkFileMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:07:41.112Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:07:41.112Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "IStorageProvider.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IStorageProvider.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:07:01.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:07:01.218Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwA4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:06:34.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:06:34.928Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "IChunkService.cs",
-              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
+              "DocumentMoniker": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
               "RelativeDocumentMoniker": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
-              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkApplication\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
+              "ToolTip": "C:\\Users\\MONSTER\\source\\repos\\ChunkFolderApplication\\ChunkApplicationProject\\ChunkFoldersProject\\ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
               "RelativeToolTip": "ChunkApplication\\ChunkApplication.Domain\\Interfaces\\IChunkService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:06:13.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:06:13.521Z"
             }
           ]
         }
