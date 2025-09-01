@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using ChunkApplication.ChunkApplication.Infrastructure.MessageHandlers.Models;
 
 namespace ChunkApplication.Infrastructure.MessageHandlers;
 
@@ -52,16 +53,13 @@ public class ReconstructFileRequestConsumer : IDisposable
                 var message = Encoding.UTF8.GetString(body);
 
                 _logger.LogInformation("Received reconstruct file request: {Message}", message);
-                System.Console.WriteLine($"🔍 RAW MESSAGE: {message}");
-
-                // Parse request - try flexible parsing
+                System.Console.WriteLine($" RAW MESSAGE: {message}");
                 string requestId = "";
                 string fileId = "";
                 string outputPath = "";
                 
                 try
                 {
-                    // First try standard format
                     var request = JsonSerializer.Deserialize<ReconstructFileRequest>(message);
                     if (request != null)
                     {
@@ -70,7 +68,6 @@ public class ReconstructFileRequestConsumer : IDisposable
                         outputPath = request.OutputPath ?? "";
                     }
                     
-                    // If OutputPath is still empty, try parsing as dynamic JSON
                     if (string.IsNullOrEmpty(outputPath))
                     {
                         using var doc = JsonDocument.Parse(message);
@@ -79,7 +76,6 @@ public class ReconstructFileRequestConsumer : IDisposable
                         requestId = root.TryGetProperty("RequestId", out var reqId) ? reqId.GetString() ?? "" : "";
                         fileId = root.TryGetProperty("FileId", out var fId) ? fId.GetString() ?? "" : "";
                         
-                        // Try both OutputPath and OutputFileName
                         if (root.TryGetProperty("OutputPath", out var outPath))
                         {
                             outputPath = outPath.GetString() ?? "";
@@ -109,26 +105,20 @@ public class ReconstructFileRequestConsumer : IDisposable
                 System.Console.WriteLine($"   - FileId: {fileId}");
                 System.Console.WriteLine($"   - OutputPath: '{outputPath}'");
 
-                // Default output directory
                 var outputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "output");
-                
-                // Ensure directory exists
+
                 if (!Directory.Exists(outputDirectory))
                 {
                     Directory.CreateDirectory(outputDirectory);
                     _logger.LogInformation("Created output directory: {OutputDirectory}", outputDirectory);
                 }
                 
-                // Handle the OutputPath - ALWAYS use the filename provided by user
                 var userInput = outputPath?.Trim() ?? "";
                 string fileName;
                 
                 if (!string.IsNullOrEmpty(userInput))
                 {
-                    // User provided a filename - ALWAYS use it (even if it's "output")
                     fileName = Path.GetFileName(userInput);
-                    
-                    // If user just wrote "output", treat it as "output.txt"
                     if (string.IsNullOrEmpty(fileName) || fileName.Equals("output", StringComparison.OrdinalIgnoreCase))
                     {
                         fileName = "output.txt";
@@ -139,7 +129,6 @@ public class ReconstructFileRequestConsumer : IDisposable
                 }
                 else
                 {
-                    // Only if user provided nothing at all, use original filename
                     var fileEntity = await _chunkService.GetFileInfoAsync(fileId);
                     fileName = fileEntity?.FileName ?? $"reconstructed_{fileId}_{DateTime.Now:yyyyMMdd_HHmmss}";
                     _logger.LogInformation("No filename provided, using original filename: {FileName}", fileName);
@@ -150,11 +139,7 @@ public class ReconstructFileRequestConsumer : IDisposable
                 
                 _logger.LogInformation("Reconstructing file to: {OutputPath}", fullOutputPath);
                 System.Console.WriteLine($"📁 Reconstructing to: {fullOutputPath}");
-                
-                // Process the request
                 var success = await _chunkService.ReconstructFileAsync(fileId, fullOutputPath);
-
-                // Create response
                 var response = new ReconstructFileResponse
                 {
                     RequestId = requestId,
@@ -164,8 +149,6 @@ public class ReconstructFileRequestConsumer : IDisposable
                     Message = success ? $"File reconstructed successfully to output/{fileName}" : "Failed to reconstruct file",
                     Timestamp = DateTime.UtcNow
                 };
-
-                // Send response
                 var responseJson = JsonSerializer.Serialize(response);
                 var responseBody = Encoding.UTF8.GetBytes(responseJson);
 
@@ -197,20 +180,6 @@ public class ReconstructFileRequestConsumer : IDisposable
     }
 }
 
-public class ReconstructFileRequest
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public string OutputPath { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
 
-public class ReconstructFileResponse
-{
-    public string RequestId { get; set; } = string.Empty;
-    public string FileId { get; set; } = string.Empty;
-    public string OutputPath { get; set; } = string.Empty;
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public DateTime Timestamp { get; set; }
-}
+
+
