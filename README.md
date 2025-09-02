@@ -48,7 +48,7 @@ Bu proje, büyük dosyaların otomatik olarak küçük parçalara (chunk) ayrıl
 
 ### **1. Projeyi Klonlayın:**
 ```bash
-git clone <repository-url>
+git clone <https://github.com/YasinnErdemm/ChunkFoldersProject.git>
 cd ChunkFoldersProject
 ```
 
@@ -73,15 +73,8 @@ docker-compose up -d
 ```
 
 #### **Local Development:**
-```bash
-# Terminal 1: ChunkApplication (Consumer)
-cd ChunkApplication
-dotnet run --project ChunkApplication.Console
-
-# Terminal 2: ChunkClient (Publisher)
-cd ChunkClient  
-dotnet run
-```
+-Visual Studio yardımı ile multiple proje seçilip client ve application tarafı aynı anda ayağa kaldırılmalıdır.
+-Bu sırada dockerdaki mssql ve rabbitmq da ayakta olmalıdır.
 
 ### **4. Web UI'lara Erişim:**
 - **RabbitMQ Management:** http://localhost:15672 (admin/admin123)
@@ -154,6 +147,8 @@ ChunkClient (Publisher) → RabbitMQ → ChunkApplication (Consumer)
 - **FileSystemStorageProvider:** `chunks/` klasörüne `.chunk` dosyaları
 - **DatabaseStorageProvider:** `chunk2/` klasörüne `.dbchunk` dosyaları
 - **Random Selection:** Her chunk rastgele provider'a atanır
+- ** Simüle etmek istenilen durum google,aws gibi providerlar yokluğnda chunks ve chunks2 dosyalarının
+farklı provider hostları olmalarıdır.
 
 ### **Veritabanı İlişkileri:**
 - **Files ↔ Chunks:** One-to-Many relationship
@@ -372,30 +367,6 @@ Chunks (
 - [x] **Interactive Client UI** - Console-based menu system
 - [x] **Real-time Processing** - Async message-based workflow
 
-## 🔮 Gelecek Özellikler
-
-- [ ] **Cloud Storage Providers** - AWS S3, Azure Blob Storage
-- [ ] **Compression Support** - Chunk compression algorithms
-- [ ] **Encryption Support** - End-to-end encryption
-- [ ] **Web UI Dashboard** - Real-time monitoring interface
-- [ ] **REST API Endpoints** - HTTP API layer
-- [ ] **Monitoring & Metrics** - Prometheus/Grafana integration
-- [ ] **Health Checks** - Service health monitoring
-- [ ] **Circuit Breaker Pattern** - Fault tolerance
-- [ ] **Distributed Caching** - Redis integration
-- [ ] **Message Retry Logic** - Dead letter queues
-
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request açın
-
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
 
 ## 🛠️ Teknoloji Stack
 
@@ -441,14 +412,6 @@ Bu proje MIT lisansı altında lisanslanmıştır.
 - **Message Batching:** Çoklu dosya tek mesajda işleme
 - **Provider Load Balancing:** Rastgele chunk dağıtımı
 
-## 👨‍💻 Geliştirici Bilgileri
-
-### **Proje Detayları:**
-- **Geliştirme Süresi:** Enterprise-level development
-- **Kod Kalitesi:** SOLID principles, Clean Architecture
-- **Test Edilebilirlik:** Interface-based design
-- **Maintainability:** Layered architecture
-- **Scalability:** Microservice-ready architecture
 
 ### **Teknik Özellikler:**
 - **Teknoloji:** .NET 8, C# 12, Entity Framework Core, RabbitMQ
